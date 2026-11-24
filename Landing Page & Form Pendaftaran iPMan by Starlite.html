@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasang Internet Rumah iPMan by Starlite — Paket 2 GBPS Free Instalasi</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    // Configure Tailwind theme with ocean blue, electric sky blue, and cyan tokens
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ocean: {
+              950: '#040D1E',
+              900: '#071633',
+              800: '#0B234F',
+              700: '#0F3370',
+            },
+            electric: {
+              600: '#0284C7',
+              500: '#0EA5E9',
+              400: '#38BDF8',
+            },
+            cyanpulse: {
+              400: '#22D3EE',
+              300: '#67E8F9',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbar for smooth dark ocean feel */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #040D1E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0F3370;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0EA5E9;
+    }
+
+    /* Glassmorphism card styling */
+    .ocean-glass {
+      background: linear-gradient(145deg, rgba(11, 35, 79, 0.72), rgba(7, 22, 51, 0.88));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    /* Subtle grid background for hero & sections */
+    .fiber-grid {
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-ocean-950 text-slate-100 font-sans antialiased selection:bg-electric-500 selection:text-white overflow-x-hidden">
+
+  <!-- TOP PROMO BANNER -->
+  <div class="bg-gradient-to-r from-ocean-800 via-electric-600 to-cyan-500 text-white py-2.5 px-4 text-xs sm:text-sm font-semibold text-center shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="bg-ocean-950/90 text-cyanpulse-300 px-2.5 py-0.5 rounded-full text-[11px] font-mono uppercase tracking-wider border border-cyan-300/30">
+        Promo Spesial
+      </span>
+      <span>Paket <strong>2 GBPS</strong> cuma <strong>Rp 225.000/bln</strong> &bull; <strong>FREE INSTALASI</strong></span>
+      <span class="hidden md:inline text-white/70">|</span>
+      <span class="hidden md:inline text-cyan-50 text-xs font-mono">Harga belum termasuk PPN 11% (Est. Rp 249.750/bln)</span>
+    </div>
+  </div>
+
+  <!-- STICKY NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-ocean-950/85 backdrop-blur-lg border-b border-sky-500/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-electric-400 via-electric-600 to-ocean-800 flex items-center justify-center shadow-lg shadow-electric-500/25 border border-cyan-300/30 group-hover:scale-105 transition-transform">
+          <i data-lucide="wifi" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white">iPMan</span>
+            <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded-md bg-electric-500/15 text-cyanpulse-300 border border-electric-400/30">
+              by Starlite
+            </span>
+          </div>
+          <p class="text-[11px] text-sky-200/70">Fiber Home Internet &bull; Sales: <strong class="text-white">Yovy</strong></p>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold text-sky-100/80">
+        <a href="#keunggulan" class="hover:text-cyanpulse-300 transition-colors">Keunggulan 2 GBPS</a>
+        <a href="#paket-unggulan" class="hover:text-cyanpulse-300 transition-colors">Detail Paket &amp; PPN</a>
+        <a href="#alur-pasang" class="hover:text-cyanpulse-300 transition-colors">Alur Pasang</a>
+        <a href="#faq" class="hover:text-cyanpulse-300 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Primary CTA Button -->
+      <a href="#form-pendaftaran" class="bg-gradient-to-r from-electric-500 to-cyan-400 hover:from-electric-400 hover:to-cyan-300 text-ocean-950 font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-lg shadow-cyan-500/25 flex items-center gap-2 transition-all active:scale-95 shrink-0">
+        <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+        <span>Daftar Free Instalasi</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 fiber-grid overflow-hidden">
+    <!-- Ambient Glows -->
+    <div class="absolute -top-24 left-1/4 w-96 h-96 bg-electric-500/20 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyanpulse-400/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+        <!-- Left Hero Headline & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-electric-500/15 border border-cyan-400/30 text-cyanpulse-300 text-xs font-bold tracking-wide">
+            <i data-lucide="sparkles" class="w-4 h-4 text-cyanpulse-300"></i>
+            <span>FREE INSTALASI &bull; SATU PAKET SUPER NGEBUT 2 GBPS</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.12] text-white">
+            Internet Rumah <span class="bg-gradient-to-r from-electric-400 via-cyanpulse-300 to-white bg-clip-text text-transparent">2 GBPS</span> dari iPMan by Starlite
+          </h1>
+
+          <p class="text-sm sm:text-base text-sky-100/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Nikmati koneksi fiber optik super kencang untuk seluruh anggota keluarga. Satu paket unggulan berkecepatan hingga <strong>2 GBPS (2.000 Mbps)</strong> dengan biaya langganan hemat <strong>Rp 225.000/bln</strong> <em>(belum termasuk PPN 11%)</em> dan <strong>Gratis Biaya Instalasi</strong>.
+          </p>
+
+          <!-- Quick Stats Pills -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
+            <div class="ocean-glass rounded-2xl p-4 text-left">
+              <div class="text-xs font-mono text-cyanpulse-300 uppercase">Kecepatan Paket</div>
+              <div class="text-xl font-extrabold text-white mt-0.5 font-mono">2 GBPS</div>
+              <div class="text-[11px] text-sky-200/70">Hanya 1 paket unggulan</div>
+            </div>
+            <div class="ocean-glass rounded-2xl p-4 text-left">
+              <div class="text-xs font-mono text-cyanpulse-300 uppercase">Harga Bulanan</div>
+              <div class="text-xl font-extrabold text-white mt-0.5 font-mono">Rp 225.000</div>
+              <div class="text-[11px] text-sky-200/70">Belum termasuk PPN 11%</div>
+            </div>
+            <div class="ocean-glass rounded-2xl p-4 text-left border-cyan-400/40">
+              <div class="text-xs font-mono text-emerald-300 uppercase">Biaya Pasang</div>
+              <div class="text-xl font-extrabold text-emerald-300 mt-0.5 font-mono">FREE</div>
+              <div class="text-[11px] text-sky-200/70">Gratis biaya instalasi</div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#form-pendaftaran" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-electric-500 to-cyan-400 hover:from-electric-400 hover:to-cyan-300 text-ocean-950 font-extrabold text-sm shadow-xl shadow-electric-500/25 flex items-center justify-center gap-2 transition-all active:scale-95">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Daftar Sekarang via WhatsApp</span>
+            </a>
+            <a href="#paket-unggulan" class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-ocean-900/90 hover:bg-ocean-800 text-sky-100 font-bold text-sm border border-sky-400/25 flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="receipt" class="w-4 h-4 text-cyanpulse-300"></i>
+              <span>Cek Simulasi PPN 11%</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Featured Package Card -->
+        <div id="paket-unggulan" class="lg:col-span-5">
+          <div class="ocean-glass rounded-3xl p-6 sm:p-8 shadow-2xl shadow-ocean-950/80 border border-cyan-400/35 relative overflow-hidden">
+            <!-- Corner Ribbon Badge -->
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-400/15 border border-emerald-400/40 text-emerald-300 text-[11px] font-mono font-bold uppercase mb-4">
+              <i data-lucide="badge-check" class="w-3.5 h-3.5"></i>
+              <span>Free Instalasi &bull; 1 Paket Saja</span>
+            </div>
+
+            <div class="flex items-start justify-between gap-3 border-b border-sky-400/15 pb-5">
+              <div>
+                <p class="text-xs font-mono uppercase tracking-wider text-cyanpulse-300">iPMan by Starlite</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Paket Home 2 GBPS</h2>
+                <p class="text-xs text-sky-200/75 mt-1">Koneksi fiber optik rumah ultra-cepat &amp; stabil</p>
+              </div>
+              <div class="w-12 h-12 rounded-2xl bg-electric-500/20 border border-cyan-400/30 flex items-center justify-center text-cyanpulse-300 shrink-0">
+                <i data-lucide="gauge" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="py-5 space-y-3 border-b border-sky-400/15">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-sky-200/80 font-medium">Harga Paket / Bulan</span>
+                <div class="text-right">
+                  <span class="text-3xl font-extrabold text-white font-mono">Rp 225.000</span>
+                  <span class="text-xs text-sky-200/70 font-mono">/bln</span>
+                </div>
+              </div>
+
+              <div class="bg-ocean-950/75 rounded-2xl p-3.5 border border-sky-500/20 space-y-1.5 text-xs">
+                <div class="flex justify-between text-sky-200/80">
+                  <span>Tarif Dasar Paket 2 GBPS</span>
+                  <span class="font-mono">Rp 225.000</span>
+                </div>
+                <div class="flex justify-between text-cyanpulse-300">
+                  <span>Estimasi PPN 11%</span>
+                  <span class="font-mono">+ Rp 24.750</span>
+                </div>
+                <div class="flex justify-between text-emerald-300 font-semibold">
+                  <span>Biaya Instalasi</span>
+                  <span class="font-mono">GRATIS (Rp 0)</span>
+                </div>
+                <div class="pt-2 mt-1 border-t border-sky-500/15 flex justify-between text-white font-bold text-sm">
+                  <span>Estimasi Total + PPN 11%</span>
+                  <span class="font-mono text-cyanpulse-300">Rp 249.750/bln</span>
+                </div>
+              </div>
+
+              <p class="text-[11px] text-amber-200/90 flex items-center gap-1.5">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-amber-300 shrink-0"></i>
+                <span>Harga yang tercantum <strong>belum termasuk PPN 11%</strong>.</span>
+              </p>
+            </div>
+
+            <!-- Package Perks -->
+            <ul class="py-5 space-y-2.5 text-xs sm:text-sm text-sky-100/90">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyanpulse-300 shrink-0"></i>
+                <span>Kecepatan hingga <strong>2 GBPS</strong> untuk banyak perangkat</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyanpulse-300 shrink-0"></i>
+                <span><strong>Free Instalasi</strong> (Gratis biaya pemasangan)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyanpulse-300 shrink-0"></i>
+                <span>Lancar untuk WFH, kelas online, streaming 4K &amp; gaming</span>
+              </li>
+            </ul>
+
+            <a href="#form-pendaftaran" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-electric-500 to-cyan-400 hover:from-electric-400 hover:to-cyan-300 text-ocean-950 font-extrabold text-sm shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 transition-all">
+              <span>Pilih Paket 2 GBPS &amp; Isi Form</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN PAKET 2 GBPS -->
+  <section id="keunggulan" class="py-16 bg-ocean-900/50 border-y border-sky-500/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyanpulse-300 font-bold">Keunggulan Layanan</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Mengapa Memilih iPMan by Starlite 2 GBPS?</h2>
+        <p class="text-xs sm:text-sm text-sky-200/75">
+          Dirancang untuk kebutuhan internet rumah modern dengan bandwidth besar, latensi responsif, dan proses pemasangan tanpa biaya instalasi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature 1 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-cyanpulse-300">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Stabil untuk Banyak Perangkat</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Kapasitas 2 GBPS memungkinkan banyak HP, laptop, smart TV, dan perangkat smart home aktif bersamaan tanpa saling berebut bandwidth.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-cyanpulse-300">
+            <i data-lucide="laptop" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">WFH &amp; Meeting Lancar</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Video conference HD, upload/download file kerja berukuran besar, dan akses cloud berjalan mulus sepanjang hari.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-cyanpulse-300">
+            <i data-lucide="tv" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Streaming 4K Anti Buffering</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Nonton film, serial, dan tayangan beresolusi tinggi 4K lebih nyaman dengan pemutaran cepat dan minim jeda buffering.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-cyanpulse-300">
+            <i data-lucide="gamepad-2" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Gaming Lebih Responsif</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Dukung pengalaman bermain game online dan update patch game berukuran besar jauh lebih cepat di rumah.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-cyanpulse-300">
+            <i data-lucide="download-cloud" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Download Super Cepat</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Unduh dokumen, aplikasi, backup data, maupun konten multimedia dalam waktu singkat dengan jalur fiber optik.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="ocean-glass rounded-2xl p-6 space-y-3 hover:border-cyan-400/40 transition-all">
+          <div class="w-11 h-11 rounded-xl bg-emerald-400/15 border border-emerald-400/30 flex items-center justify-center text-emerald-300">
+            <i data-lucide="gift" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Promo Free Instalasi</h3>
+          <p class="text-xs text-sky-200/75 leading-relaxed">
+            Hemat biaya awal pemasangan karena promo <strong>Free Instalasi</strong> berlaku untuk pendaftaran paket 2 GBPS.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALUR PEMASANGAN -->
+  <section id="alur-pasang" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyanpulse-300 font-bold">Proses Cepat</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">4 Langkah Mudah Pasang WiFi</h2>
+        <p class="text-xs sm:text-sm text-sky-200/75">
+          Mulai dari pengisian formulir hingga koneksi internet 2 GBPS aktif di rumah Anda.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="ocean-glass rounded-2xl p-5 relative">
+          <span class="text-xs font-mono font-bold text-cyanpulse-300 bg-electric-500/15 px-2.5 py-1 rounded-lg border border-cyan-400/25">LANGKAH 01</span>
+          <h3 class="text-base font-bold text-white mt-4">Isi Form Pendaftaran</h3>
+          <p class="text-xs text-sky-200/75 mt-1.5 leading-relaxed">
+            Lengkapi nama, nomor WhatsApp aktif, alamat pemasangan lengkap, patokan lokasi, dan rencana tanggal pasang.
+          </p>
+        </div>
+
+        <div class="ocean-glass rounded-2xl p-5 relative">
+          <span class="text-xs font-mono font-bold text-cyanpulse-300 bg-electric-500/15 px-2.5 py-1 rounded-lg border border-cyan-400/25">LANGKAH 02</span>
+          <h3 class="text-base font-bold text-white mt-4">Konfirmasi WhatsApp</h3>
+          <p class="text-xs text-sky-200/75 mt-1.5 leading-relaxed">
+            Pesan otomatis terkirim ke WhatsApp <strong>Yovy (082258659397)</strong> untuk pengecekan coverage jaringan dan jadwal.
+          </p>
+        </div>
+
+        <div class="ocean-glass rounded-2xl p-5 relative">
+          <span class="text-xs font-mono font-bold text-cyanpulse-300 bg-electric-500/15 px-2.5 py-1 rounded-lg border border-cyan-400/25">LANGKAH 03</span>
+          <h3 class="text-base font-bold text-white mt-4">Survey &amp; Instalasi Gratis</h3>
+          <p class="text-xs text-sky-200/75 mt-1.5 leading-relaxed">
+            Tim melakukan penjadwalan &amp; pemasangan perangkat dengan promo <strong>Free Instalasi</strong> di lokasi rumah Anda.
+          </p>
+        </div>
+
+        <div class="ocean-glass rounded-2xl p-5 relative border-cyan-400/35">
+          <span class="text-xs font-mono font-bold text-emerald-300 bg-emerald-400/15 px-2.5 py-1 rounded-lg border border-emerald-400/30">LANGKAH 04</span>
+          <h3 class="text-base font-bold text-white mt-4">Internet 2 GBPS Aktif</h3>
+          <p class="text-xs text-sky-200/75 mt-1.5 leading-relaxed">
+            Koneksi internet iPMan by Starlite 2 GBPS siap digunakan untuk segala aktivitas digital rumah tangga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULIR PENDAFTARAN & INTEGRASI WHATSAPP -->
+  <section id="form-pendaftaran" class="py-16 bg-ocean-900/60 border-t border-sky-500/15">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ocean-glass rounded-3xl p-6 sm:p-10 shadow-2xl border border-cyan-400/30 space-y-8">
+
+        <!-- Form Heading -->
+        <div class="text-center space-y-2 border-b border-sky-400/15 pb-6">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-electric-500/15 border border-cyan-400/30 text-cyanpulse-300 text-xs font-mono font-bold">
+            <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
+            <span>Formulir Pendaftaran Resmi iPMan by Starlite</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Daftar Pasang Paket 2 GBPS (Free Instalasi)</h2>
+          <p class="text-xs sm:text-sm text-sky-200/80 max-w-2xl mx-auto">
+            Setelah dikirim, data pendaftaran akan otomatis tersusun rapi dan membuka WhatsApp ke <strong>082258659397 (Yovy)</strong>.
+          </p>
+        </div>
+
+        <!-- Locked Package Banner -->
+        <div class="rounded-2xl bg-ocean-950/90 border border-cyan-400/35 p-4 sm:p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-electric-500/20 text-cyanpulse-300 border border-cyan-400/30 font-bold">
+                Paket Terkunci
+              </span>
+              <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-400/15 text-emerald-300 border border-emerald-400/30 font-bold">
+                Free Instalasi
+              </span>
+            </div>
+            <h3 class="text-base sm:text-lg font-extrabold text-white">
+              2 GBPS — Rp 225.000/bln <span class="text-xs font-normal text-sky-200/75">(belum termasuk PPN 11%)</span>
+            </h3>
+            <p class="text-xs text-sky-200/70 font-mono">
+              Estimasi setelah PPN 11%: Rp 249.750/bln &bull; Tujuan WA: Yovy (082258659397)
+            </p>
+          </div>
+          <div class="shrink-0 flex items-center gap-2 text-xs font-mono text-cyanpulse-300 bg-ocean-900 px-3.5 py-2 rounded-xl border border-sky-500/20">
+            <i data-lucide="lock" class="w-4 h-4"></i>
+            <span>Hanya 1 Paket Tersedia</span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <form id="registrationForm" onsubmit="handleRegistrationSubmit(event)" class="space-y-6">
+
+          <!-- Locked Package Read-Only Field -->
+          <div class="space-y-1.5">
+            <label for="paketTerpilih" class="block text-xs font-bold uppercase tracking-wider text-sky-100">
+              Paket Terpilih (Otomatis Terkunci)
+            </label>
+            <input
+              type="text"
+              id="paketTerpilih"
+              name="paketTerpilih"
+              value="2 GBPS — Rp 225.000/bln (belum termasuk PPN 11%, Free Instalasi)"
+              readonly
+              class="w-full rounded-xl bg-ocean-950/90 border border-cyan-400/30 px-4 py-3 text-xs sm:text-sm font-mono text-cyanpulse-300 cursor-not-allowed focus:outline-none"
+            />
+          </div>
+
+          <!-- Customer Name & Active WhatsApp -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label for="namaLengkap" class="block text-xs font-bold uppercase tracking-wider text-sky-100">
+                Nama Lengkap <span class="text-cyanpulse-300">*</span>
+              </label>
+              <input
+                type="text"
+                id="namaLengkap"
+                name="namaLengkap"
+                required
+                placeholder="Contoh: Raka Pratama"
+                class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+              />
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="waAktif" class="block text-xs font-bold uppercase tracking-wider text-sky-100">
+                Nomor WhatsApp Aktif <span class="text-cyanpulse-300">*</span>
+              </label>
+              <input
+                type="tel"
+                id="waAktif"
+                name="waAktif"
+                required
+                placeholder="Contoh: 081234567890"
+                class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white font-mono placeholder-slate-500 outline-none transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Complete Installation Address -->
+          <div class="space-y-4 pt-2 border-t border-sky-400/15">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-cyanpulse-300 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span>Alamat Pemasangan Lengkap</span>
+            </h3>
+
+            <div class="space-y-1.5">
+              <label for="alamatJalan" class="block text-xs font-semibold text-sky-100">
+                Nama Jalan / Blok / No. Rumah <span class="text-cyanpulse-300">*</span>
+              </label>
+              <input
+                type="text"
+                id="alamatJalan"
+                name="alamatJalan"
+                required
+                placeholder="Contoh: Jl. Samudra Biru No. 18, Blok B4"
+                class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="space-y-1.5">
+                <label for="rtRw" class="block text-xs font-semibold text-sky-100">
+                  RT / RW <span class="text-cyanpulse-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="rtRw"
+                  name="rtRw"
+                  required
+                  placeholder="Contoh: RT 003 / RW 007"
+                  class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white font-mono placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="kelurahan" class="block text-xs font-semibold text-sky-100">
+                  Kelurahan <span class="text-cyanpulse-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="kelurahan"
+                  name="kelurahan"
+                  required
+                  placeholder="Contoh: Kebon Jeruk"
+                  class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="kecamatan" class="block text-xs font-semibold text-sky-100">
+                  Kecamatan <span class="text-cyanpulse-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="kecamatan"
+                  name="kecamatan"
+                  required
+                  placeholder="Contoh: Kebon Jeruk"
+                  class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label for="kotaKabupaten" class="block text-xs font-semibold text-sky-100">
+                  Kota / Kabupaten <span class="text-cyanpulse-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="kotaKabupaten"
+                  name="kotaKabupaten"
+                  required
+                  placeholder="Contoh: Jakarta Barat"
+                  class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="kodePos" class="block text-xs font-semibold text-sky-100">
+                  Kode Pos <span class="text-cyanpulse-300">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="kodePos"
+                  name="kodePos"
+                  required
+                  maxlength="10"
+                  placeholder="Contoh: 11530"
+                  class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white font-mono placeholder-slate-500 outline-none transition-all"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Landmark / Shareloc & Preferred Installation Date -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2 border-t border-sky-400/15">
+            <div class="space-y-1.5">
+              <label for="patokanLokasi" class="block text-xs font-bold uppercase tracking-wider text-sky-100">
+                Patokan Lokasi / Shareloc <span class="text-cyanpulse-300">*</span>
+              </label>
+              <input
+                type="text"
+                id="patokanLokasi"
+                name="patokanLokasi"
+                required
+                placeholder="Contoh: Depan minimarket biru / link Google Maps"
+                class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white placeholder-slate-500 outline-none transition-all"
+              />
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="tanggalPasang" class="block text-xs font-bold uppercase tracking-wider text-sky-100">
+                Rencana Tanggal Pemasangan <span class="text-cyanpulse-300">*</span>
+              </label>
+              <input
+                type="date"
+                id="tanggalPasang"
+                name="tanggalPasang"
+                required
+                class="w-full rounded-xl bg-ocean-950 border border-sky-500/25 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 px-4 py-3 text-sm text-white font-mono outline-none transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Submit & Copy Message Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <button
+              type="submit"
+              class="flex-1 py-4 px-6 rounded-2xl bg-gradient-to-r from-electric-500 via-sky-400 to-cyan-400 hover:from-electric-400 hover:to-cyan-300 text-ocean-950 font-extrabold text-sm sm:text-base shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2.5 transition-all active:scale-[0.99]"
+            >
+              <i data-lucide="message-square-plus" class="w-5 h-5"></i>
+              <span>Kirim Pendaftaran ke Yovy (082258659397)</span>
+            </button>
+
+            <button
+              type="button"
+              onclick="copyFormattedMessage()"
+              class="py-4 px-5 rounded-2xl bg-ocean-950 hover:bg-ocean-800 text-cyanpulse-300 font-bold text-xs sm:text-sm border border-cyan-400/35 flex items-center justify-center gap-2 transition-all shrink-0"
+            >
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span id="copyBtnText">Salin Pesan</span>
+            </button>
+          </div>
+
+          <!-- Inline Status / Feedback Banner (No alert() used) -->
+          <div id="statusFeedback" class="hidden rounded-2xl px-4 py-3 text-xs sm:text-sm font-medium border"></div>
+        </form>
+
+        <!-- Direct Contact & Formatted Message Preview -->
+        <div class="rounded-2xl bg-ocean-950/85 border border-sky-500/20 p-5 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-sky-500/15 pb-3">
+            <div class="flex items-center gap-2 text-xs font-bold text-white">
+              <i data-lucide="headphones" class="w-4 h-4 text-cyanpulse-300"></i>
+              <span>Kontak Sales Resmi: <strong>Yovy</strong> &bull; <span class="font-mono text-cyanpulse-300">082258659397</span></span>
+            </div>
+            <a
+              href="https://wa.me/6282258659397?text=Halo%20Yovy%2C%20saya%20ingin%20tanya%20info%20pasang%20internet%20rumah%20iPMan%20by%20Starlite%20paket%202%20GBPS%20(Rp%20225.000%2Fbln%2C%20Free%20Instalasi)."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 hover:text-emerald-200 underline underline-offset-4"
+            >
+              <span>Chat Langsung WhatsApp</span>
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+
+          <div class="space-y-1.5">
+            <div class="text-[11px] font-mono uppercase tracking-wider text-sky-300/75">
+              Pratinjau Format Pesan WhatsApp Otomatis
+            </div>
+            <pre id="waPreviewBox" class="bg-ocean-900/70 border border-sky-500/15 rounded-xl p-4 text-xs font-mono text-sky-100 whitespace-pre-wrap leading-relaxed overflow-x-auto"></pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="text-center space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyanpulse-300 font-bold">Pertanyaan Umum</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">FAQ Paket 2 GBPS iPMan by Starlite</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="ocean-glass rounded-2xl p-5 group" open>
+          <summary class="font-bold text-sm sm:text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+            <span>Apakah paket yang tersedia hanya 2 GBPS saja?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyanpulse-300 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="text-xs sm:text-sm text-sky-200/80 mt-3 leading-relaxed">
+            Ya, untuk promo pendaftaran ini hanya tersedia satu paket unggulan yaitu <strong>2 GBPS</strong> dengan tarif dasar <strong>Rp 225.000/bulan</strong> (belum termasuk PPN 11%).
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="ocean-glass rounded-2xl p-5 group">
+          <summary class="font-bold text-sm sm:text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+            <span>Berapa estimasi total biaya bulanan setelah PPN 11%?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyanpulse-300 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="text-xs sm:text-sm text-sky-200/80 mt-3 leading-relaxed">
+            Harga paket <strong>Rp 225.000/bln</strong> belum termasuk PPN 11%. Perhitungan estimasi PPN 11% dari Rp 225.000 adalah <strong>Rp 24.750</strong>, sehingga estimasi totalnya sekitar <strong>Rp 249.750/bulan</strong>.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="ocean-glass rounded-2xl p-5 group">
+          <summary class="font-bold text-sm sm:text-base text-white cursor-pointer list-none flex items-center justify-between gap-4">
+            <span>Bagaimana ketentuan promo Free Instalasi?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyanpulse-300 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="text-xs sm:text-sm text-sky-200/80 mt-3 leading-relaxed">
+            Pendaftaran paket 2 GBPS mendapatkan promo <strong>Free Instalasi</strong> (gratis biaya pemasangan) sesuai ketentuan coverage jaringan di lokasi rumah Anda. Silakan konfirmasi detail penjadwalan bersama <strong>Yovy (082258659397)</strong>.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ocean-950 border-t border-sky-500/15 py-8 text-xs text-sky-200/65">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-electric-400 to-electric-600 flex items-center justify-center text-ocean-950 font-bold">
+          <i data-lucide="wifi" class="w-4 h-4"></i>
+        </div>
+        <span class="font-bold text-white">iPMan by Starlite</span>
+        <span class="font-mono text-[11px] text-cyanpulse-300">&bull; 2 GBPS (Rp 225.000/bln + PPN 11%, Free Instalasi)</span>
+      </div>
+      <p>Sales WhatsApp: <strong class="text-white font-mono">082258659397</strong> (Yovy)</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Target WhatsApp number in international format for Yovy (082258659397)
+    const WHATSAPP_TARGET_INTL = "6282258659397";
+    const SALES_NAME = "Yovy";
+    const SALES_NUMBER_DISPLAY = "082258659397";
+    const LOCKED_PACKAGE_TEXT = "2 GBPS — Rp 225.000/bln (belum termasuk PPN 11%, Free Instalasi)";
+
+    /**
+     * Build a structured WhatsApp message string from current form fields.
+     */
+    function buildFormattedMessage() {
+      const namaLengkap = document.getElementById("namaLengkap").value.trim() || "[Belum diisi]";
+      const waAktif = document.getElementById("waAktif").value.trim() || "[Belum diisi]";
+      const alamatJalan = document.getElementById("alamatJalan").value.trim() || "[Belum diisi]";
+      const rtRw = document.getElementById("rtRw").value.trim() || "[Belum diisi]";
+      const kelurahan = document.getElementById("kelurahan").value.trim() || "[Belum diisi]";
+      const kecamatan = document.getElementById("kecamatan").value.trim() || "[Belum diisi]";
+      const kotaKabupaten = document.getElementById("kotaKabupaten").value.trim() || "[Belum diisi]";
+      const kodePos = document.getElementById("kodePos").value.trim() || "[Belum diisi]";
+      const patokanLokasi = document.getElementById("patokanLokasi").value.trim() || "[Belum diisi]";
+      const tanggalPasang = document.getElementById("tanggalPasang").value || "[Belum dipilih]";
+
+      return [
+        "🌐 *PENDAFTARAN INTERNET RUMAH — iPMan by Starlite*",
+        "",
+        `Halo Kak *${SALES_NAME}* (${SALES_NUMBER_DISPLAY}), saya ingin mendaftar pasang internet rumah dengan detail berikut:`,
+        "",
+        "📦 *PAKET PILIHAN:*",
+        `• ${LOCKED_PACKAGE_TEXT}`,
+        "• Estimasi setelah PPN 11%: Rp 249.750/bln",
+        "",
+        "👤 *DATA PELANGGAN:*",
+        `• Nama Lengkap: *${namaLengkap}*`,
+        `• No. WhatsApp Aktif: *${waAktif}*`,
+        "",
+        "📍 *ALAMAT PEMASANGAN LENGKAP:*",
+        `• Jalan / Blok / No. Rumah: ${alamatJalan}`,
+        `• RT / RW: ${rtRw}`,
+        `• Kelurahan: ${kelurahan}`,
+        `• Kecamatan: ${kecamatan}`,
+        `• Kota / Kabupaten: ${kotaKabupaten}`,
+        `• Kode Pos: ${kodePos}`,
+        `• Patokan Lokasi / Shareloc: ${patokanLokasi}`,
+        "",
+        "📅 *RENCANA TANGGAL PEMASANGAN:*",
+        `• *${tanggalPasang}*`,
+        "",
+        "Mohon dibantu pengecekan jaringan dan proses pemasangan *Free Instalasi*. Terima kasih!"
+      ].join("\n");
+    }
+
+    /**
+     * Refresh the live WhatsApp preview box whenever user types in form fields.
+     */
+    function updatePreviewBox() {
+      const previewEl = document.getElementById("waPreviewBox");
+      if (previewEl) {
+        previewEl.textContent = buildFormattedMessage();
+      }
+    }
+
+    /**
+     * Display inline feedback banner without using browser alert().
+     */
+    function showFeedback(message, type = "info") {
+      const box = document.getElementById("statusFeedback");
+      if (!box) return;
+
+      box.classList.remove(
+        "hidden",
+        "bg-emerald-950/80", "border-emerald-400/40", "text-emerald-200",
+        "bg-sky-950/80", "border-cyan-400/40", "text-cyanpulse-300",
+        "bg-rose-950/80", "border-rose-400/40", "text-rose-200"
+      );
+
+      if (type === "success") {
+        box.classList.add("bg-emerald-950/80", "border-emerald-400/40", "text-emerald-200");
+      } else if (type === "error") {
+        box.classList.add("bg-rose-950/80", "border-rose-400/40", "text-rose-200");
+      } else {
+        box.classList.add("bg-sky-950/80", "border-cyan-400/40", "text-cyanpulse-300");
+      }
+
+      box.textContent = message;
+    }
+
+    /**
+     * Copy formatted WhatsApp message to clipboard with fallback support.
+     */
+    function copyFormattedMessage() {
+      const message = buildFormattedMessage();
+      const copyTextSpan = document.getElementById("copyBtnText");
+
+      const onSuccess = () => {
+        if (copyTextSpan) copyTextSpan.textContent = "Tersalin!";
+        showFeedback("Pesan pendaftaran berhasil disalin ke clipboard. Anda juga bisa langsung klik tombol Kirim Pendaftaran ke Yovy.", "success");
+        setTimeout(() => {
+          if (copyTextSpan) copyTextSpan.textContent = "Salin Pesan";
+        }, 2200);
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(message).then(onSuccess).catch(() => {
+          fallbackCopyText(message, onSuccess);
+        });
+      } else {
+        fallbackCopyText(message, onSuccess);
+      }
+    }
+
+    function fallbackCopyText(text, callback) {
+      try {
+        const tempTextarea = document.createElement("textarea");
+        tempTextarea.value = text;
+        tempTextarea.style.position = "fixed";
+        tempTextarea.style.opacity = "0";
+        document.body.appendChild(tempTextarea);
+        tempTextarea.focus();
+        tempTextarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempTextarea);
+        callback();
+      } catch (err) {
+        showFeedback("Gagal menyalin otomatis. Silakan salin teks langsung dari kotak pratinjau di bawah.", "error");
+      }
+    }
+
+    /**
+     * Handle form submission and open WhatsApp chat to Yovy (6282258659397).
+     */
+    function handleRegistrationSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        showFeedback("Mohon lengkapi seluruh kolom wajib bertanda bintang (*) sebelum mengirim.", "error");
+        return;
+      }
+
+      const formattedMessage = buildFormattedMessage();
+      updatePreviewBox();
+
+      const waUrl = `https://wa.me/${WHATSAPP_TARGET_INTL}?text=${encodeURIComponent(formattedMessage)}`;
+      showFeedback(`Membuka WhatsApp ke ${SALES_NAME} (${SALES_NUMBER_DISPLAY})... Jika tidak terbuka otomatis, gunakan tombol Chat Langsung WhatsApp di bawah.`, "success");
+
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+    }
+
+    // Initialize icons, default installation date, and live preview listeners
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      const dateInput = document.getElementById("tanggalPasang");
+      if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        dateInput.value = tomorrow.toISOString().split("T")[0];
+      }
+
+      const form = document.getElementById("registrationForm");
+      if (form) {
+        form.querySelectorAll("input").forEach((input) => {
+          input.addEventListener("input", updatePreviewBox);
+          input.addEventListener("change", updatePreviewBox);
+        });
+      }
+
+      updatePreviewBox();
+    });
+  </script>
+</body>
+</html>
